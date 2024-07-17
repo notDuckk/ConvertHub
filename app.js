@@ -1,6 +1,8 @@
 const express = require('express');
 const { Sequelize } = require('sequelize');
 const app = express();
+path = require('path')
+app.use(express.static(path.join(__dirname, 'Public')));
 app.use(express.json())
 const cors= require("cors")
 const corsOptions ={
