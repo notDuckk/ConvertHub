@@ -104,9 +104,9 @@ const getFavs = () => {
 
             const favButton = document.createElement("button");
             favButton.className = "favHistBtn";
-            favButton.textContent = `${base} > ${targ}`;
+            favButton.textContent = `${base} > ${targ}`
             favButton.onclick = () => {
-                baseCurrs.value = base;
+                 baseCurrs.value = base;
                 targCurrs.value = targ
                 fetch(`https://api.freecurrencyapi.com/v1/latest?base_currency=${base}&currencies=${targ}`, requestOptions)
                     .then(response => response.json())
@@ -120,7 +120,7 @@ const getFavs = () => {
             };
 
             favPairs.appendChild(favButton);
-        });
+        })
     })
     .catch(error => console.error('Error fetching favorite pairs:', error));
 };
