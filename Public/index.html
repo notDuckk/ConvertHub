@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
+    <title>ConvertHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Currency Converter</h1>
-    <div class="converter">
-        <label for="base-currency">Base Currency:</label>
-        <select id="base-currency">
-            <option value="">Choose a Currency</option>
-        </select>
-        
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" value="1" min="0">
+    <div class="container">
 
-        <label for="target-currency">Target Currency:<span id="targAmnt"></span></label>
-        <select id="target-currency"><option>Choose a Currency</option></select>
+        <div class="converter">
+            <h1>ConvertHub</h1>
+            <label for="base-currency">Base Currency:</label>
+            <select id="base-currency">
+                <option value="">Choose a Currency</option>
+            </select>
 
-        <p>Converted Amount: <span id="converted-amount"></span></p>
-        <button id="historical-rates">View Historical Rates</button>
-        <div id="historical-rates-container"></div>
-        <button id="save-favorite" class="favHistBtn">Save Favorite</button>
-        <div id="favorite-currency-pairs">
-            
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" value="1" min="0">
+
+            <label for="target-currency">Target Currency:<span id="targAmnt"></span></label>
+            <select id="target-currency"><option>Choose a Currency</option></select>
+
+            <div>
+            <h4>Converted Amount: <span id="converted-amount"></span></h4>
+            <button id="save-favorite" class="favHistBtn">Save Favorite</button>
+            </div>
+
+
+        </div>
+        <div class = "favorites converter">
+            <h1>Favorites:</h1>
+            <div id="favorite-currency-pairs"></div>
         </div>
     </div>
     <script src="script.js"></script>
